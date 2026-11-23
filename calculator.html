@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator — CodeAlpha Task 2</title>
+  <meta name="theme-color" content="#6a11cb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <main class="calculator" aria-label="Calculator">
+    <!-- Two-line display: expression on top, big value below -->
+    <div class="display" role="status" aria-live="polite">
+      <span class="display-expr" id="displayExpr"></span>
+      <span class="display-value" id="displayValue">0</span>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-func" data-action="clear">C</button>
+      <button class="btn btn-func" data-action="backspace"><span class="func-icon" aria-hidden="true">⌫</span><span class="sr-only">backspace</span></button>
+      <button class="btn btn-func" data-action="sqrt">√</button>
+      <button class="btn btn-operator" data-action="divide" aria-label="divide">÷</button>
+
+      <button class="btn" data-action="digit" data-digit="7">7</button>
+      <button class="btn" data-action="digit" data-digit="8">8</button>
+      <button class="btn" data-action="digit" data-digit="9">9</button>
+      <button class="btn btn-operator" data-action="multiply" aria-label="multiply">×</button>
+
+      <button class="btn" data-action="digit" data-digit="4">4</button>
+      <button class="btn" data-action="digit" data-digit="5">5</button>
+      <button class="btn" data-action="digit" data-digit="6">6</button>
+      <button class="btn btn-operator" data-action="subtract" aria-label="subtract">−</button>
+
+      <button class="btn" data-action="digit" data-digit="1">1</button>
+      <button class="btn" data-action="digit" data-digit="2">2</button>
+      <button class="btn" data-action="digit" data-digit="3">3</button>
+      <button class="btn btn-operator" data-action="add" aria-label="add">+</button>
+
+      <button class="btn" data-action="digit" data-digit="0">0</button>
+      <button class="btn btn-func" data-action="negate" aria-label="negate">±</button>
+      <button class="btn" data-action="decimal" aria-label="decimal point">.</button>
+      <button class="btn btn-equal" data-action="equal" aria-label="equals">=</button>
+    </div>
+  </main>
+  <script src="calculator.js"></script>
+</body>
+</html>
